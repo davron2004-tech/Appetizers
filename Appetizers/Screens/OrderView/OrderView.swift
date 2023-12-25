@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct OrderView: View {
+    @Query var appetizers: [AppetizerDataModel]
+    var viewModel = OrderViewModel()
     var body: some View {
         NavigationStack{
-            Text("Order View")
-                .navigationTitle("Orders")
+            List(MockData.appetizers){appetizer in
+                AppetizerListCell(appetizer: appetizer)
+                    .onTapGesture {
+                        viewModel.selectedAppetizer = appetizer
+                        viewModel.isShowingDetail = true
+                    }
+            }
         }
     }
 }

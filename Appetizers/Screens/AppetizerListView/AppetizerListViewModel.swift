@@ -17,6 +17,8 @@ import Observation
             isShowingAlert = true
         }
     }
+    var selectedAppetizer: Appetizer?
+    var isShowingDetail = false
     func getAppetizers(){
         isLoading = true
         NetworkManager.shared.getAppetizers {result in

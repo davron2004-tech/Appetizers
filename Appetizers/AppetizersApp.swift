@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct AppetizersApp: App {
@@ -13,5 +14,6 @@ struct AppetizersApp: App {
         WindowGroup {
             AppetizerTabView()
         }
+        .modelContainer(for: AppetizerDataModel.self)
     }
 }
