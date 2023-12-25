@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD4186A92B3A200D000520D4 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4186A82B3A200D000520D4 /* Order.swift */; };
 		DD52B1B92B39806C00243E1B /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD52B1B82B39806C00243E1B /* AppetizerDetailView.swift */; };
 		DD52B1BC2B39967D00243E1B /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD52B1BB2B39967D00243E1B /* APButton.swift */; };
 		DD52B1BE2B39984200243E1B /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD52B1BD2B39984200243E1B /* XDismissButton.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD4186A82B3A200D000520D4 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		DD52B1B82B39806C00243E1B /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
 		DD52B1BB2B39967D00243E1B /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
 		DD52B1BD2B39984200243E1B /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			children = (
 				DD849D9C2B3835980083F17F /* Appetizer.swift */,
 				DD52B1C32B39BA0700243E1B /* User.swift */,
+				DD4186A82B3A200D000520D4 /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				DD52B1C42B39BA0700243E1B /* User.swift in Sources */,
 				DD52B1BC2B39967D00243E1B /* APButton.swift in Sources */,
 				DD849DA92B386CD80083F17F /* LoadingView.swift in Sources */,
+				DD4186A92B3A200D000520D4 /* Order.swift in Sources */,
 				DD849D8B2B382DDD0083F17F /* AppetizerTabView.swift in Sources */,
 				DD52B1C82B39CBD500243E1B /* OrderListCell.swift in Sources */,
 				DD52B1C62B39C75300243E1B /* OrderViewModel.swift in Sources */,
