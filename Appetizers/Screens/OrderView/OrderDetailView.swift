@@ -10,31 +10,31 @@ import SwiftUI
 struct OrderDetailView: View {
     
     @Environment(\.modelContext) var context
-    let appetizer:AppetizerDataModel
+    let order:Order
     @Binding var isShowingDetail:Bool
     
     var body: some View {
         VStack(alignment: .center){
-            AppetizerRemoteImage(urlString: appetizer.imageURL)
+            AppetizerRemoteImage(urlString: order.imageURL)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 300,height: 225)
             VStack{
-                Text(appetizer.name)
+                Text(order.name)
                     .fontWeight(.semibold)
                     .font(.title2)
-                Text(appetizer.mealDescription)
+                Text(order.mealDescription)
                     .multilineTextAlignment(.center)
                     .font(.body)
                     .padding()
                 HStack(spacing: 40){
-                    NutritionInfoForOrder(title: "Calories", value: appetizer.calories)
-                    NutritionInfoForOrder(title: "Carbs", value: appetizer.carbs)
-                    NutritionInfoForOrder(title: "Protein", value: appetizer.protein)
+                    NutritionInfoForOrder(title: "Calories", value: order.calories)
+                    NutritionInfoForOrder(title: "Carbs", value: order.carbs)
+                    NutritionInfoForOrder(title: "Protein", value: order.protein)
                 }
             }
             Spacer()
             Button{
-                context.delete(appetizer)
+                context.delete(order)
                 isShowingDetail = false
             }label: {
                 DeleteButton(title: "Remove from orders")
@@ -57,7 +57,7 @@ struct OrderDetailView: View {
 }
 
 #Preview {
-    OrderDetailView(appetizer: MockData.sampleOrder, isShowingDetail: .constant(true))
+    OrderDetailView(order: MockData.sampleOrder, isShowingDetail: .constant(true))
 }
 struct NutritionInfoForOrder: View {
     let title: String

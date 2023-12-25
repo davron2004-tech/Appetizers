@@ -34,7 +34,7 @@ struct AppetizerDetailView: View {
             }
             Spacer()
             Button{
-                let appetizerToSave = AppetizerDataModel(
+                let appetizerToSave = Order(
                     id: appetizer.id,
                     name: appetizer.name,
                     description: appetizer.description,

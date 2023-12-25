@@ -14,6 +14,6 @@ struct AppetizersApp: App {
         WindowGroup {
             AppetizerTabView()
         }
-        .modelContainer(for: AppetizerDataModel.self)
+        .modelContainer(for: Order.self)
     }
 }

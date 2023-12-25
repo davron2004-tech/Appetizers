@@ -10,12 +10,12 @@ import SwiftData
 
 struct OrderView: View {
     
-    @Query var appetizers: [AppetizerDataModel]
+    @Query var orders: [Order]
     @Environment(\.modelContext) var context
     @Bindable var viewModel = OrderViewModel()
     
     var body: some View {
-        if appetizers.isEmpty {
+        if orders.isEmpty {
             EmptyOrderView()
         }
         else{
@@ -23,20 +23,22 @@ struct OrderView: View {
                 NavigationStack{
                     VStack{
                         List(){
-                            ForEach(appetizers){appetizer in
-                                OrderListCell(appetizer: appetizer)
+                            ForEach(orders){appetizer in
+                                OrderListCell(order: appetizer)
                                     .onTapGesture {
-                                        viewModel.selectedAppetizer = appetizer
+                                        viewModel.selectedOrder = appetizer
                                         viewModel.isShowingDetail = true
                                     }
                             }
                             .onDelete{ indexSet in
-                                
+                                for index in indexSet{
+                                    context.delete(orders[index])
+                                }
                             }
                         }
                         .listStyle(InsetListStyle())
                         Spacer()
-                        APButton(title: "$\(viewModel.calculateTotalCost(appetizers: appetizers),specifier: "%.2f") - Place Order")
+                        APButton(title: "$\(viewModel.calculateTotalCost(orders: orders),specifier: "%.2f") - Place Order")
                             .padding(.bottom)
                     }
                     .disabled(viewModel.isShowingDetail)
@@ -44,7 +46,7 @@ struct OrderView: View {
                 }
                 .blur(radius: viewModel.isShowingDetail ? 20 : 0)
                 if viewModel.isShowingDetail{
-                    OrderDetailView(appetizer: viewModel.selectedAppetizer!, isShowingDetail: $viewModel.isShowingDetail)
+                    OrderDetailView(order: viewModel.selectedOrder!, isShowingDetail: $viewModel.isShowingDetail)
                 }
             }
         }

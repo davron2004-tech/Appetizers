@@ -20,7 +20,7 @@ struct Appetizer: Decodable,Identifiable{
 }
 
 @Model
-class AppetizerDataModel{
+class Order{
     var id: Int
     var name: String
     var mealDescription: String
@@ -58,7 +58,7 @@ struct MockData{
     )
     static let appetizers = [sampleAppetizer,sampleAppetizer,sampleAppetizer,sampleAppetizer]
     
-    static let sampleOrder = AppetizerDataModel(id: 001,
+    static let sampleOrder = Order(id: 001,
                                            name: "Test Appetizer",
                                            description: "This the description for my appetizer",
                                            price: 23.45,

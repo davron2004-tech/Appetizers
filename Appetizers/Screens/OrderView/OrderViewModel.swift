@@ -18,13 +18,13 @@ import SwiftData
             isShowingAlert = true
         }
     }
-    var selectedAppetizer: AppetizerDataModel?
+    var selectedOrder: Order?
     var isShowingDetail = false
     
-    func calculateTotalCost(appetizers: [AppetizerDataModel]) -> Double{
+    func calculateTotalCost(orders: [Order]) -> Double{
         var sum = 0.0
-        for appetizer in appetizers {
-            sum += appetizer.price
+        for order in orders {
+            sum += order.price
         }
         return sum
     }

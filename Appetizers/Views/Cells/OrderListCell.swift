@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct OrderListCell: View {
-    let appetizer:AppetizerDataModel
+    let order:Order
     var body: some View {
         HStack{
-            AppetizerRemoteImage(urlString: appetizer.imageURL)
+            AppetizerRemoteImage(urlString: order.imageURL)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 120,height: 90)
                 .padding(.trailing)
             VStack(alignment: .leading,spacing: 5){
-                Text(appetizer.name)
+                Text(order.name)
                     .fontWeight(.medium)
                     .font(.title2)
-                Text("$\(appetizer.price,specifier: "%.2f")")
+                Text("$\(order.price,specifier: "%.2f")")
                     .foregroundStyle(.secondary)
             }
             
@@ -28,5 +28,5 @@ struct OrderListCell: View {
     }
 }
 #Preview {
-    OrderListCell(appetizer: MockData.sampleOrder)
+    OrderListCell(order: MockData.sampleOrder)
 }
