@@ -1,5 +1,5 @@
 //
-//  DetailView.swift
+//  OrderDetailView.swift
 //  Appetizers
 //
 //  Created by Davron Abdukhakimov on 25/12/23.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct AppetizerDetailView: View {
+struct OrderDetailView: View {
     
     @Environment(\.modelContext) var context
-    let appetizer:Appetizer
+    let appetizer:AppetizerDataModel
     @Binding var isShowingDetail:Bool
     
     var body: some View {
@@ -22,32 +22,22 @@ struct AppetizerDetailView: View {
                 Text(appetizer.name)
                     .fontWeight(.semibold)
                     .font(.title2)
-                Text(appetizer.description)
+                Text(appetizer.mealDescription)
                     .multilineTextAlignment(.center)
                     .font(.body)
                     .padding()
                 HStack(spacing: 40){
-                    NutritionInfo(title: "Calories", value: appetizer.calories)
-                    NutritionInfo(title: "Carbs", value: appetizer.carbs)
-                    NutritionInfo(title: "Protein", value: appetizer.protein)
+                    NutritionInfoForOrder(title: "Calories", value: appetizer.calories)
+                    NutritionInfoForOrder(title: "Carbs", value: appetizer.carbs)
+                    NutritionInfoForOrder(title: "Protein", value: appetizer.protein)
                 }
             }
             Spacer()
             Button{
-                let appetizerToSave = AppetizerDataModel(
-                    id: appetizer.id,
-                    name: appetizer.name,
-                    description: appetizer.description,
-                    price: appetizer.price,
-                    imageURL: appetizer.imageURL,
-                    calories: appetizer.calories,
-                    protein: appetizer.protein,
-                    carbs: appetizer.carbs
-                )
-                context.insert(appetizerToSave)
+                context.delete(appetizer)
                 isShowingDetail = false
             }label: {
-                APButton(title: "$\(appetizer.price,specifier: "%.2f") - Add To Order")
+                DeleteButton(title: "Remove from orders")
             }
             .padding(.bottom,30)
             
@@ -67,9 +57,9 @@ struct AppetizerDetailView: View {
 }
 
 #Preview {
-    AppetizerDetailView(appetizer: MockData.sampleAppetizer, isShowingDetail: .constant(true))
+    OrderDetailView(appetizer: MockData.sampleOrder, isShowingDetail: .constant(true))
 }
-struct NutritionInfo: View {
+struct NutritionInfoForOrder: View {
     let title: String
     let value: Int
     var body: some View {

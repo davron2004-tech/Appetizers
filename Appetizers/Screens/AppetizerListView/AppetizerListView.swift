@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct AppetizerListView: View {
+    
     @Bindable var viewModel = AppetizerListViewModel()
+    
+    
     var body: some View {
         ZStack{
             NavigationStack{

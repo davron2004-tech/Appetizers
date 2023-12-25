@@ -1,15 +1,14 @@
 //
-//  AppetizerListCell.swift
+//  OrderListCell.swift
 //  Appetizers
 //
-//  Created by Davron Abdukhakimov on 24/12/23.
+//  Created by Davron Abdukhakimov on 25/12/23.
 //
 
 import SwiftUI
 
-struct AppetizerListCell: View {
-    
-    let appetizer:Appetizer
+struct OrderListCell: View {
+    let appetizer:AppetizerDataModel
     var body: some View {
         HStack{
             AppetizerRemoteImage(urlString: appetizer.imageURL)
@@ -28,7 +27,6 @@ struct AppetizerListCell: View {
         }
     }
 }
-
 #Preview {
-    AppetizerListCell(appetizer: MockData.sampleAppetizer)
+    OrderListCell(appetizer: MockData.sampleOrder)
 }

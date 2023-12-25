@@ -14,6 +14,9 @@
 		DD52B1C22B39AF7500243E1B /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD52B1C12B39AF7500243E1B /* String+Ext.swift */; };
 		DD52B1C42B39BA0700243E1B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD52B1C32B39BA0700243E1B /* User.swift */; };
 		DD52B1C62B39C75300243E1B /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD52B1C52B39C75300243E1B /* OrderViewModel.swift */; };
+		DD52B1C82B39CBD500243E1B /* OrderListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD52B1C72B39CBD500243E1B /* OrderListCell.swift */; };
+		DD52B1CA2B39CECA00243E1B /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD52B1C92B39CECA00243E1B /* OrderDetailView.swift */; };
+		DD52B1CC2B39D25900243E1B /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD52B1CB2B39D25900243E1B /* DeleteButton.swift */; };
 		DD849D892B382DDD0083F17F /* AppetizersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD849D882B382DDD0083F17F /* AppetizersApp.swift */; };
 		DD849D8B2B382DDD0083F17F /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD849D8A2B382DDD0083F17F /* AppetizerTabView.swift */; };
 		DD849D8D2B382DDF0083F17F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD849D8C2B382DDF0083F17F /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 		DD52B1C12B39AF7500243E1B /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		DD52B1C32B39BA0700243E1B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DD52B1C52B39C75300243E1B /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		DD52B1C72B39CBD500243E1B /* OrderListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListCell.swift; sourceTree = "<group>"; };
+		DD52B1C92B39CECA00243E1B /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		DD52B1CB2B39D25900243E1B /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		DD849D852B382DDD0083F17F /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD849D882B382DDD0083F17F /* AppetizersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersApp.swift; sourceTree = "<group>"; };
 		DD849D8A2B382DDD0083F17F /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				DD52B1BB2B39967D00243E1B /* APButton.swift */,
+				DD52B1CB2B39D25900243E1B /* DeleteButton.swift */,
 				DD52B1BD2B39984200243E1B /* XDismissButton.swift */,
 			);
 			path = Buttons;
@@ -151,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				DD849D9A2B382E750083F17F /* OrderView.swift */,
+				DD52B1C92B39CECA00243E1B /* OrderDetailView.swift */,
 				DD52B1C52B39C75300243E1B /* OrderViewModel.swift */,
 			);
 			path = OrderView;
@@ -224,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				DD849D9E2B383CD60083F17F /* AppetizerListCell.swift */,
+				DD52B1C72B39CBD500243E1B /* OrderListCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -311,6 +320,7 @@
 				DD849DA32B383F9D0083F17F /* APError.swift in Sources */,
 				DD52B1BE2B39984200243E1B /* XDismissButton.swift in Sources */,
 				DD849D9F2B383CD60083F17F /* AppetizerListCell.swift in Sources */,
+				DD52B1CA2B39CECA00243E1B /* OrderDetailView.swift in Sources */,
 				DD849DA52B384F740083F17F /* AppetizerListViewModel.swift in Sources */,
 				DD849DAB2B386D9C0083F17F /* Color+Ext.swift in Sources */,
 				DD849D992B382E630083F17F /* AccountView.swift in Sources */,
@@ -318,12 +328,14 @@
 				DD52B1BC2B39967D00243E1B /* APButton.swift in Sources */,
 				DD849DA92B386CD80083F17F /* LoadingView.swift in Sources */,
 				DD849D8B2B382DDD0083F17F /* AppetizerTabView.swift in Sources */,
+				DD52B1C82B39CBD500243E1B /* OrderListCell.swift in Sources */,
 				DD52B1C62B39C75300243E1B /* OrderViewModel.swift in Sources */,
 				DD849DA12B383E8C0083F17F /* NetworkManager.swift in Sources */,
 				DD849DAD2B387CB90083F17F /* RemoteImage.swift in Sources */,
 				DD52B1C22B39AF7500243E1B /* String+Ext.swift in Sources */,
 				DD849D892B382DDD0083F17F /* AppetizersApp.swift in Sources */,
 				DD849DA72B385DF80083F17F /* Alert.swift in Sources */,
+				DD52B1CC2B39D25900243E1B /* DeleteButton.swift in Sources */,
 				DD849D972B382E530083F17F /* AppetizerListView.swift in Sources */,
 				DD52B1B92B39806C00243E1B /* AppetizerDetailView.swift in Sources */,
 				DD849D9B2B382E750083F17F /* OrderView.swift in Sources */,
