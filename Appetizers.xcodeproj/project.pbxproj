@@ -34,6 +34,7 @@
 		DD849DA92B386CD80083F17F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD849DA82B386CD80083F17F /* LoadingView.swift */; };
 		DD849DAB2B386D9C0083F17F /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD849DAA2B386D9C0083F17F /* Color+Ext.swift */; };
 		DD849DAD2B387CB90083F17F /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD849DAC2B387CB90083F17F /* RemoteImage.swift */; };
+		DD8F13AF2B3A480B00B9720D /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8F13AE2B3A480B00B9720D /* CustomModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		DD849DA82B386CD80083F17F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		DD849DAA2B386D9C0083F17F /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		DD849DAC2B387CB90083F17F /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		DD8F13AE2B3A480B00B9720D /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 		DD849DB72B3885DB0083F17F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DD8F13AE2B3A480B00B9720D /* CustomModifiers.swift */,
 				DD52B1BA2B39966200243E1B /* Buttons */,
 				DD849DBA2B3886130083F17F /* Image */,
 				DD849DB92B3885F60083F17F /* Cells */,
@@ -339,6 +342,7 @@
 				DD52B1C22B39AF7500243E1B /* String+Ext.swift in Sources */,
 				DD849D892B382DDD0083F17F /* AppetizersApp.swift in Sources */,
 				DD849DA72B385DF80083F17F /* Alert.swift in Sources */,
+				DD8F13AF2B3A480B00B9720D /* CustomModifiers.swift in Sources */,
 				DD52B1CC2B39D25900243E1B /* DeleteButton.swift in Sources */,
 				DD849D972B382E530083F17F /* AppetizerListView.swift in Sources */,
 				DD52B1B92B39806C00243E1B /* AppetizerDetailView.swift in Sources */,

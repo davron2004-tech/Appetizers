@@ -25,24 +25,24 @@ struct AppetizerResponse:Decodable{
 
 struct MockData{
     static let sampleAppetizer = Appetizer(id: 001,
-                                           name: "Test Appetizer",
-                                           description: "This the description for my appetizer",
-                                           price: 23.45,
-                                           imageURL: "",
-                                           calories: 10,
-                                           protein: 15,
-                                           carbs: 20
+                                        name: "Test Appetizer",
+                                        description: "This the description for my appetizer",
+                                        price: 23.45,
+                                        imageURL: "",
+                                        calories: 10,
+                                        protein: 15,
+                                        carbs: 20
     )
     static let appetizers = [sampleAppetizer,sampleAppetizer,sampleAppetizer,sampleAppetizer]
     
     static let sampleOrder = Order(id: 001,
-                                           name: "Test Appetizer",
-                                           description: "This the description for my appetizer",
-                                           price: 23.45,
-                                           imageURL: "",
-                                           calories: 10,
-                                           protein: 15,
-                                           carbs: 20
+                                name: "Test Appetizer",
+                                description: "This the description for my appetizer",
+                                price: 23.45,
+                                imageURL: "",
+                                calories: 10,
+                                protein: 15,
+                                carbs: 20
     )
-    static let orders = [sampleAppetizer,sampleAppetizer,sampleAppetizer,sampleAppetizer]
+    static let orders = [sampleOrder,sampleOrder,sampleOrder,sampleOrder]
 }

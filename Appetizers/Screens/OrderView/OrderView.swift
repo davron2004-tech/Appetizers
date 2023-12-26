@@ -38,8 +38,14 @@ struct OrderView: View {
                         }
                         .listStyle(InsetListStyle())
                         Spacer()
-                        APButton(title: "$\(viewModel.calculateTotalCost(orders: orders),specifier: "%.2f") - Place Order")
-                            .padding(.bottom)
+//                        APButton(title: "$\(viewModel.calculateTotalCost(orders: orders),specifier: "%.2f") - Place Order")
+                        Button{
+                            
+                        }label: {
+                            Text("$\(viewModel.calculateTotalCost(orders: orders),specifier: "%.2f") - Place Order")
+                        }
+                        .modifier(StandardButtonStyle())
+                        .padding(.bottom)
                     }
                     .disabled(viewModel.isShowingDetail)
                     .navigationTitle("Order")
